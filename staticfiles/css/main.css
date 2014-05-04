@@ -1,4 +1,21 @@
+body
+{
+background-color:#FF9999;
+}
 
+.hero-unit
+{
+background-color:#FF9966;
+padding-right:100px;
+padding-left:100px;
+}
+
+.navbar-inverse 
+{
+
+background-color:#FF9966;
+
+}
 
 /* ==========================================================================
    Author's custom styles

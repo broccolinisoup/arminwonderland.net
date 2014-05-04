@@ -41,17 +41,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="{% url 'home' %}">"Armagan is here"</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li ><a href="#about">About Me</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="active"><a href="{% url 'home' %}">Anasayfa</a></li>
+                    <li ><a href="{% url 'aboutme' %}">Hakkımda</a></li>
+                    <li><a href="#contact">İletişim</a></li>
                 </ul>
                 <ul class="nav pull-right">
                     <a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Twitter</a>
                     <a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Facebook</a>
                     <a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en">Linkedin</a>
+                    <a href="https://github.com/ArmaganErsoz" class="label label-info" data-show-count="false" data-lang="en">Github</a>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -62,7 +63,7 @@
     {% block container %}{% endblock %}
 
     <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Arm 2014</p>
     </footer>
 
 </div> <!-- /container -->

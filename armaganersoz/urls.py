@@ -3,13 +3,15 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.views import serve
 from django.contrib import admin
-from armaganersoz.home.views import HomeView
+from armaganersoz.home.views import HomeView, BlogView, AboutMeView
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^blog/(?P<id>\d+)/$', BlogView.as_view(), name='blog'),
+    url(r'^aboutme/$', AboutMeView.as_view(), name='aboutme'),
 
     # static
     url(r'^%s(?P<path>.*)$' % settings.STATIC_URL.lstrip('/'), serve,
