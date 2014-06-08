@@ -3,6 +3,7 @@
 {% block title %}Welcome to my sample application{% endblock %}
 
 {% block container %}
+        {% autoescape on %}
 
 <div class="row-fluid">
         <div class="span12 viewport">
@@ -23,12 +24,16 @@
     <div class="row">
     {% for blog_post in blog_posts %}
         <div class="span4">
+
             <h2 style="font-family:comicsansms;color:purple;font-size:20px;">{{blog_post.title |truncatechars:35}}</h2>
-            <p>{{blog_post.context|truncatechars:300}}</p>
+            <p>{{blog_post.context|truncatechars:300|safe}}</p>
+
             <p><a type = 'button' class="btn btn-info" href="{% url 'blog' blog_post.id %}">Devamını oku</a></p>
         </div>
     {% endfor %}
     </div>
 
     <hr>
+        {% endautoescape %}
 {% endblock %}
+
