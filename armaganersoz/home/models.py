@@ -1,10 +1,10 @@
 from django.db import models
+from tinymce.models import HTMLField
 
-# Create your models here.
 
 class BlogPost(models.Model):
-	title = models.CharField(max_length=32, verbose_name = u'Baslik')
-	context = models.CharField(max_length=323232, verbose_name = u'Icerik')
+	title = models.CharField(max_length=1024, verbose_name = u'Baslik')
+	context = HTMLField()
 	date = models.DateField(verbose_name = u'Yayimlandigi Tarih')
 
 	def __unicode__(self):

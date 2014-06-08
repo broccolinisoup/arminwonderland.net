@@ -4,32 +4,27 @@
 
 {% block container %}
 
-    <div class="row-fluid">
-        <div class="span11 viewport">
+<div class="row-fluid">
+        <div class="span12 viewport">
             
             <div class="hero-unit hidden-phone">
-                <h3>mesajatma.org nedir?</h3>
+                <h3>slide alanı</h3>
                 <div class="row-fluid">
                     <p class="span12">
                         <img url="../staticfiles/img/final.jpg" width="370" height="150">
                     </p>
-                    
                 </div>
             </div>
+            
         </div>
-    </div>
-
-
-
-    <!-- Main hero unit for a primary marketing message or call to action -->
-    
-
-    <!-- Example row of columns -->
+</div>
+<!-- Main hero unit for a primary marketing message or call to action -->
+<!-- Example row of columns -->
     <div class="row">
     {% for blog_post in blog_posts %}
         <div class="span4">
-            <h2 style="font-family:comicsansms;color:purple;font-size:20px;">{{blog_post.title}}</h2>
-            <p>{{blog_post.context|truncatechars:100}}</p>
+            <h2 style="font-family:comicsansms;color:purple;font-size:20px;">{{blog_post.title |truncatechars:35}}</h2>
+            <p>{{blog_post.context|truncatechars:300}}</p>
             <p><a type = 'button' class="btn btn-info" href="{% url 'blog' blog_post.id %}">Devamını oku</a></p>
         </div>
     {% endfor %}

@@ -11,6 +11,8 @@ TEMPLATE_DEBUG = DEBUG
 ABSOLUTE_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 ABSOLUTE_TEMPLATES_PATH = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'templates/'))
 
+
+
 # add root directory to PYTHONPATH
 if not ABSOLUTE_PROJECT_ROOT in sys.path:
     sys.path.insert(0, ABSOLUTE_PROJECT_ROOT)
@@ -156,6 +158,7 @@ CORE_APPS = (
 EXTERNAL_APPS = (
     'django_extensions',
     'south',
+    'tinymce',
 )
 
 LOCAL_APPS = (
@@ -203,4 +206,5 @@ LOGGING = {
         },
     }
 }
+DJANGO_SETTINGS_MODULE='testtinymce.staticfiles_settings'
 

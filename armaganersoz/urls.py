@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^blog/(?P<id>\d+)/$', BlogView.as_view(), name='blog'),
     url(r'^aboutme/$', AboutMeView.as_view(), name='aboutme'),
 
+    
+    (r'^tinymce/', include('tinymce.urls')),
     # static
     url(r'^%s(?P<path>.*)$' % settings.STATIC_URL.lstrip('/'), serve,
         {'show_indexes': True, 'insecure': False}),
