@@ -22,4 +22,5 @@ try:
     # can override those settings it sees fit.
     from local import * 
 except ImportError:
-    from default import *
+	from settings.default import *
+    #from default import *

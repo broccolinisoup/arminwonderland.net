@@ -4,7 +4,7 @@ import sys
 
 # Django settings for armaganersoz project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # Absolute paths for where the project and templates are stored.
@@ -44,12 +44,12 @@ DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'prod_database_name',
+        'NAME': 'broccolinisoup',
         # The rest is not used with sqlite3:
-        'USER': 'prod_user',
-        'PASSWORD': 'prod_p@ssword',
-        'HOST': 'localhost',
-        'PORT': '',
+        #'USER': 'prod_user',
+        #'PASSWORD': 'prod_p@ssword',
+        #'HOST': 'localhost',
+        #'PORT': '',
     }
 }
 

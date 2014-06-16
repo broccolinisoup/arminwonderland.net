@@ -1,5 +1,5 @@
 #! /usr/bin/env python2.7
-from default import *
+from settings.default import *
 
 """
 This is the local settings template file. So, do not modify this file.
