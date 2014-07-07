@@ -150,7 +150,6 @@ CORE_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # django admin
     'django.contrib.admin',
     'django.contrib.admindocs',
 )
