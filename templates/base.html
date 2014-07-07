@@ -2,13 +2,18 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="tr">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% block title %}{% endblock %}</title>
-    <meta name="description" content="">
+    <meta name="description" content="Self micro-blog">
+    <meta name="author" content="Armağan Ersöz">
     <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="broccolinisoup,python,scala,programming">
+
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- http://jqueryui.com/themeroller/ -->
     <!-- http://stackoverflow.com/questions/1348559/are-there-hosted-jquery-ui-themes-anywhere -->
@@ -16,15 +21,15 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.min.css">
     <!--[if lt IE 8]><link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome-ie7.min.css"><![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+    <script src="{{ STATIC_URL }}js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <style>
         body {
             padding-top: 60px;
             padding-bottom: 40px;
         }
     </style>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.min.css">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
-    <script src="{{ STATIC_URL }}js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -33,25 +38,27 @@
 
 <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top">
+
     <div class="navbar-inner">
+
         <div class="container">
             
-            <a class="brand" href="{% url 'home' %}">"Armagan is here"</a>
+            <a class="brand" href="{% url 'home' %}">Broccolini Soup</a>
+
+
             <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="active"><a href="{% url 'home' %}">Anasayfa</a></li>
-                    <li ><a href="{% url 'aboutme' %}">Hakkımda</a></li>
-                    <li><a href="#contact">İletişim</a></li>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li ><a href="{% url 'aboutme' %}">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <ul class="nav pull-right">
-                    <a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Twitter</a>
-                    <a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Facebook</a>
-                    <a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en">Linkedin</a>
-                    <a href="https://github.com/ArmaganErsoz" class="label label-info" data-show-count="false" data-lang="en">Github</a>
-                </ul>
+                
             </div><!--/.nav-collapse -->
+
+
         </div>
+
     </div>
 </div>
 
@@ -64,8 +71,21 @@
 
 
     {% endblock %}
+    
 
     <footer>
+
+        <ul class="nav navbar-nav navbar-right">
+                    <a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Twitter</a>
+                    <a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Facebook</a>
+                    <a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en">Linkedin</a>
+                    <a href="https://github.com/ArmaganErsoz" class="label label-info" data-show-count="false" data-lang="en">Github</a>
+                </ul>
+
+
+
+
+
         <p>&copy; Arm 2014</p>
     </footer>
 
