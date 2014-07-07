@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/theme.css">
 
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
@@ -30,8 +32,8 @@
         </div>-->
         <ul class="menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About Me</a></li>
             <li><a href="/about.html">Tech Blog</a></li>
+            <li><a href="/about.html">About Me</a></li>
             <li><a href="/contact.hmtm">Contact</a></li>
 
         </ul>
@@ -40,69 +42,81 @@
 
 
 <header>
-    <div class="title-wrapper">
-        <p class="header-title">Hello! I'm Armağan. I try to specialise in web developing.</p>
-        <p>You know you really want to click this button</p>
+    <div class="white-banner">
+    <h1>Hello! I'm Armağan.</h1>
+        <p class="banner-parag"> I try to specialise in web developing.<br>
+        Let this website helps you find some technical writings or information about me.
+        </p>
+        <a type = 'button'  class="start-button" href="#">Let's Start!</a>
+
     </div>    
 </header>
 
-<section class="call-to-action">
+
+
+<section class="blog-posts">
     <div class="container">
-        <div class="intro">  
-            <h3 class="section-title white">CALL TO ACTION</h3>
-            <p>You know you really want to click this button</p>
-        </div>
-        <div class="intro right">
-            <a class="call-button" href="#">Click here</a>      
-        </div>
-    </div>
-</section>
-
-
-
-<section class="works">
-    <div class="container">
-        <h3 class="section-title gray works">WORKS</h3>
+        <h3 class="section-title gray works">Last Blog Posts</h3>
     <div class="column">
-       <img src="{{ STATIC_URL }}img/cards1.jpg" alt="works">
-       <img src="{{ STATIC_URL }}img/cards1.jpg" alt="works"> 
+       <a href="#"><h5 class="section-title gray works">Tail-Recursion in Scala (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">Function value strategies in Scala (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">PostgreSql on Ubuntu with General Errors (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">Fetching in SQL (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">Tail-Recursion in Scala (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">Function value strategies in Scala (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">PostgreSql on Ubuntu with General Errors (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">Fetching in SQL (15 May 2014)</h5></a>
     </div>
 
 
-    <div class="column">
-        <img src="{{ STATIC_URL }}img/cards2.jpg" alt="works"> 
-        <img src="{{ STATIC_URL }}img/cards2.jpg" alt="works">
-        
-    </div>
 </div>
 </section>
 
 
-<section class="testimonials">
 
-   <div class="container">
-        <h3 class="section-title gray2">Testımonıals</h3>
-        <p>
-           lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-           lorem ipsum lorem ipsum
-           lorem ipsum
-        </p>
-   </div> 
+<section class="about-me">
+    <div class="container">
+
+        <div class="content">
+        <h3 class="section-title white">Who am I?</h3>
+
+        <p>Creating as well as developing software backend systems particularly web-based systems, which includes system / database administration and software development that have challenging problems to be solved are my personal interests in my profession.
+        About My Objectives;
+        •   Influenced by C/C++ programming language family.
+        •   User++ level on Linux MacOSX and Windows platforms for development purposes.
+        •   A quick learner of different languages / platforms / database systems and upcoming technologies on open source based and Microsoft platforms including C/C++, C#, Python and PHP. 
+        •   Believing in the development life cycle and prototyping model production with Agile / Scrum working methodologies.
+        •   Object oriented approach.
+        •   Upgrader.</p>
+        </div>
+
+
+
+        <div class="photo">
+
+        <img src="{{ STATIC_URL }}img/arm.png" alt="profil">
+        </div> 
+        
 </section>
 
-<section class="map">
+
+
+
+
+<section class="contact">
    <div class="container">
-        <h3 class="section-title white">Located</h3>
+        <h3 class="section-title white">Get in Touch!</h3>
    </div> 
 </section>
 
 <footer>
    <div class="container">
          <ul class="footer-menu">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
+                <li><a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Twitter</a></li>
+                <li><a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Facebook</a></li>
+                <li><a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en">Linkedin</a></li>
+                <li><a href="https://github.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Github</a></li>
+            </ul>
    </div> 
 </footer> 
 

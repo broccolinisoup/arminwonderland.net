@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
-$(".header-subtitle").on("click", function() {
+$(".start-button").on("click", function() {
 
-    $(".call-to-action").slideToggle();
+    $(".white-banner").slideToggle();
+    $("header").slideToggle();
 
 });
 
-$(".call-button").on("click", function(e) {
+$(".stabutton").on("click", function(e) {
     e.preventDefault();
     $(".column img").toggleClass("bigger");
 
