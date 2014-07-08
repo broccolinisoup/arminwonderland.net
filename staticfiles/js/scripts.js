@@ -7,11 +7,14 @@ $(".start-button").on("click", function() {
 
 });
 
-$(".stabutton").on("click", function(e) {
+$(".footer-menu img").on("hover", function(e) {
     e.preventDefault();
-    $(".column img").toggleClass("bigger");
+    $(".footer-menu img").toggleClass("bigger");
 
 
 });
+
+
+
 
 });

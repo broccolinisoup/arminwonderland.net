@@ -58,6 +58,10 @@
     <div class="container">
         <h3 class="section-title gray works">Last Blog Posts</h3>
     <div class="column">
+       <a href="#"><h5 class="section-title gray works">Tail-Recursion in Scala (15 May 2014)</h5>
+       <a href="#"><h5 class="section-title gray works">Function value strategies in Scala (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">PostgreSql on Ubuntu with General Errors (15 May 2014)</h5></a>
+       <a href="#"><h5 class="section-title gray works">Fetching in SQL (15 May 2014)</h5></a>
        <a href="#"><h5 class="section-title gray works">Tail-Recursion in Scala (15 May 2014)</h5></a>
        <a href="#"><h5 class="section-title gray works">Function value strategies in Scala (15 May 2014)</h5></a>
        <a href="#"><h5 class="section-title gray works">PostgreSql on Ubuntu with General Errors (15 May 2014)</h5></a>
@@ -99,23 +103,34 @@
         
 </section>
 
-
-
-
-
 <section class="contact">
    <div class="container">
         <h3 class="section-title white">Get in Touch!</h3>
+        <form method="post" action="">
+        
+            <div class="form-element">
+            <li>{{ form.name }}</li>
+            <li>{{ form.email }}</li>
+            <li class="content">{{ form.content }}</li>
+            <a type = 'button'  class="start-button" href="#">Yup!</a>
+            
+
+            
+            </div>
+        
+        </form>
    </div> 
 </section>
 
 <footer>
    <div class="container">
          <ul class="footer-menu">
-                <li><a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Twitter</a></li>
-                <li><a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Facebook</a></li>
-                <li><a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en">Linkedin</a></li>
-                <li><a href="https://github.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en">Github</a></li>
+                <li><a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/twitter.png" alt="profil"></a></li>
+                <li><a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/facebook.png" alt="profil"></a></li>
+                <li><a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/linkedin.png" alt="profil"></a></li>
+                <li><a href="https://github.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/github.png" alt="profil"></a></li>
+                <li><a href="http://www.kadinyazilimci.com/author/broccolinisoup/" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/kadinyazilimci.png" alt="profil"></a></li>
+                <li><a href="http://www.kadinyazilimci.com/author/broccolinisoup/" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/Slideshare.png" alt="profil"></a></li>
             </ul>
    </div> 
 </footer> 
