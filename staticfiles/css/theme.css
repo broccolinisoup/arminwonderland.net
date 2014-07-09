@@ -1,6 +1,6 @@
 	body {
 
-        font-family: Helvetica;
+        font-family: chaparral-pro;
     }
 
      .white {
@@ -18,9 +18,11 @@
     .nav {
         background-color: #293137;
         margin-bottom: 0;
+        position: fixed;
+    	top: 0;
+    	z-index: 10000;
 
     }
-
     .menu {
         color: #fff;
         padding-top: 30px;
@@ -39,14 +41,13 @@
     	-webkit-transition: 0.3s color ease-in-out;
 
     }
-
-
 header {
 	background-image: url('../img/alice.jpg');
 	height: 800px;
 	font-weight: 100%;
 	background-position: center center;
 	background-size: cover;
+	margin-top: 60px;
 
 }
 
@@ -78,7 +79,7 @@ text-indent: 0;
 border: 1px solid #eeb44f;
 display: inline-block;
 color: #ffffff;
-font-family: Arial Black;
+font-family:  chaparral-pro;
 font-size: 15px;
 font-weight: bold;
 font-style: normal;
@@ -105,23 +106,30 @@ padding-top: 2px;
 	background-color: #FAEBD7;
 	
 	width: 100%;
-	height: 800px;
+	height: 400px;
 }
 
 .about-me {
 	background-color: #FF9D9D;
 	width: 100%;
-	height: 400px;
+	height: 340px;
 }
 
 .section-title {
 	font-style: italic;
 	font-family: chaparral-pro;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: 100;
 
 }
 
+.objectives {
+	font-style: italic;
+	font-family: chaparral-pro;
+	font-size: 17px;
+	font-weight: 100;
+
+}
 .right {
 	text-align: center;
 	padding-top: 60px;
@@ -232,7 +240,7 @@ padding-top: 2px;
 
 footer {
 	background-color: #191e22;
-	height: 100px;
+	height: 120px;
 }
 
 .footer-menu {

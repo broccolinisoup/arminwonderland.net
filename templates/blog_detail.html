@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_arm.html" %}
 
 {% block title %}Welcome to my sample application{% endblock %}
 
@@ -6,13 +6,12 @@
     <!-- Main hero unit for a primary marketing message or call to action -->
 
     <!-- Example row of columns -->
-    <div class="row">
+  
     
         
-            <h2>{{blog_post.title}}</h2>
-            <p>{{blog_post.context}}</p>
+            <h2>{{blog_post.title | safe }}</h2>
+            <p>{{blog_post.context | safe}}</p>
 
-    </div>
+    
 
-    <hr>
 {% endblock %}

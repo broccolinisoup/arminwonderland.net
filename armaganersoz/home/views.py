@@ -47,7 +47,7 @@ class BlogView(TemplateView):
 
 		id=self.kwargs['id']
 
-		blog_post = BlogPost.objects.get(id=1)
+		blog_post = BlogPost.objects.get(id=id)
 
 		context = {
 			'blog_post': blog_post,
