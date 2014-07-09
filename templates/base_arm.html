@@ -31,7 +31,7 @@
             <img style="background-color:#293137" src="assets/images/logo.png" alt="logo">
         </div>-->
         <ul class="menu">
-            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="/about.html">Tech Blog</a></li>
             <li><a href="/about.html">About Me</a></li>
             <li><a href="/contact.hmtm">Contact</a></li>
@@ -43,11 +43,15 @@
 
 <header>
     <div class="white-banner">
-    <h1>Hello! I'm Armağan.</h1>
+    {% if success %}<h1>Hey! Thank you!</h1>
+    <p class="banner-parag"> I got your message.<br>
+     I will return you as soon as possible. Bye!   
+        </p>
+    {% else %}<h1>Hello! I'm Armağan.</h1>
         <p class="banner-parag"> I try to specialise in web developing.<br>
         Let this website helps you find some technical writings or information about me.
         </p>
-        <a type = 'button'  class="start-button" href="#">Let's Start!</a>
+        <a type = 'button'  class="start-button" href="#">Let's Start!</a>{% endif %}
 
     </div>    
 </header>
@@ -106,13 +110,14 @@
 <section class="contact">
    <div class="container">
         <h3 class="section-title white">Get in Touch!</h3>
-        <form method="post" action="">
+        <form method="post" action="{% url 'home' %}">{% csrf_token %}
         
             <div class="form-element">
             <li>{{ form.name }}</li>
             <li>{{ form.email }}</li>
             <li class="content">{{ form.content }}</li>
-            <a type = 'button'  class="start-button" href="#">Yup!</a>
+            <button class="start-button">Yup!</button>
+            
             
 
             

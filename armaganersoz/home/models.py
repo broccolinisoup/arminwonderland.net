@@ -23,7 +23,7 @@ class Contacts(models.Model):
 
 		
 	def __unicode__(self):
-		return u'%s' % (self.name, self.email)
+		return u'%s %s' % (self.name, self.email)
 
 	class Meta:
 		ordering = ["date"]
