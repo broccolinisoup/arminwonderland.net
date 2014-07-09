@@ -135,13 +135,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 # APPS
 # django debugging stuff
+'''
 ADMIN_TOOL_APPS = (
     'admin_tools',
     'admin_tools.theming',
     'admin_tools.menu',
     'admin_tools.dashboard',
 )
-
+'''
 # django
 CORE_APPS = (
     'django.contrib.auth',
@@ -165,7 +166,7 @@ LOCAL_APPS = (
 )
 
 # the order is important!
-INSTALLED_APPS = ADMIN_TOOL_APPS + CORE_APPS + LOCAL_APPS + EXTERNAL_APPS
+INSTALLED_APPS = CORE_APPS + LOCAL_APPS + EXTERNAL_APPS # TO DO!: ADMIN_TOOL_APPS  ekle
 
 
 # A sample logging configuration. The only tangible logging
