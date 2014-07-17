@@ -22,6 +22,6 @@ urlpatterns = patterns('',
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 
-	#TO DO: Admin tools'u ayağa kaldır.
+	#TO DO: Admin tools'u ayaga kaldir.
 	#url(r'^admin_tools/', include('admin_tools.urls')),
 )

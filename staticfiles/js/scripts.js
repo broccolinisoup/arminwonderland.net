@@ -3,7 +3,7 @@ $(document).ready(function() {
 $(".start-button").on("click", function() {
 
     $(".white-banner").slideToggle();
-    $("header").slideToggle();
+    $("header").slideToggle(;)
 
 });
 
