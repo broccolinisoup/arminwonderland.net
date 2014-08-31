@@ -3,5 +3,4 @@
 armaganersoz/__pycache__
 armaganersoz/settings/local.py
 #editor
-.idea/
-
+.idea/workspace.xml

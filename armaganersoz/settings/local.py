@@ -27,7 +27,7 @@ DATABASES = {
 
 if DEBUG:
     # set INTERNAL_IPS to entire local network
-    from fnmatch import fnmatch
+    from fnmatch import fnmatchs
 
     class WildcardNetwork(list):
         def __contains__(self, key):
