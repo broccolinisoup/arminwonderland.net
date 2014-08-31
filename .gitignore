@@ -1,6 +1,7 @@
 #Python 
 *.pyc
-
+armaganersoz/__pycache__
+armaganersoz/local.py
 #editor
-
+.idea/
 
