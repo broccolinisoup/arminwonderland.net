@@ -1,6 +1,8 @@
 #Python 
 *.pyc
-armaganersoz/__pycache__
-armaganersoz/settings/local.py
+*.py[co]
+.*local.py
+
+
 #editor
 .idea/workspace.xml
