@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fdac96b-4987-470b-8f25-0e98641096a2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/armaganersoz/settings/local.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/armaganersoz/settings/local.py" afterPath="$PROJECT_DIR$/armaganersoz/settings/local.py" />
     </list>
     <ignored path="armaganersoz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +49,18 @@
       <file leaf-file-name="local.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/armaganersoz/settings/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5276382" vertical-offset="15" max-vertical-offset="1200">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.96231157" vertical-offset="344" max-vertical-offset="1200">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_local.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/armaganersoz/settings/_local.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+              <caret line="17" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -473,10 +483,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/armaganersoz/settings/_local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="17" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/armaganersoz/settings/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5276382" vertical-offset="15" max-vertical-offset="1200">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.96231157" vertical-offset="344" max-vertical-offset="1200">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding />
         </state>
       </provider>
