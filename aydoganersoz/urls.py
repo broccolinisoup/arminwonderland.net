@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.views import serve
 from django.contrib import admin
-from armaganersoz.home.views import HomeView, BlogView
+from aydoganersoz.home.views import HomeView, BlogView
 
 admin.autodiscover()
 

@@ -1,8 +1,8 @@
 #! /usr/bin/env python2.7
 from django.views.generic import TemplateView
 from datetime import datetime
-from armaganersoz.home.models import BlogPost
-from armaganersoz.home.forms import ContactForm
+from aydoganersoz.home.models import BlogPost
+from aydoganersoz.home.forms import ContactForm
 from django.template.response import TemplateResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext

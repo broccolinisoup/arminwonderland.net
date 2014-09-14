@@ -2,7 +2,7 @@
 import os
 import sys
 
-# Django settings for armaganersoz project.
+# Django settings for aydoganersoz project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -108,7 +108,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'armaganersoz.urls'
+ROOT_URLCONF = 'aydoganersoz.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 # disabled - outsite the app
@@ -162,7 +162,7 @@ EXTERNAL_APPS = (
 )
 
 LOCAL_APPS = (
-    'armaganersoz.home',
+    'aydoganersoz.home',
 )
 
 # the order is important!
