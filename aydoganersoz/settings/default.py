@@ -43,13 +43,13 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'broccolinisoup',
         # The rest is not used with sqlite3:
-        #'USER': 'prod_user',
-        #'PASSWORD': 'prod_p@ssword',
-        #'HOST': 'localhost',
-        #'PORT': '',
+        'USER': '******',
+        'PASSWORD': '********',
+        'HOST': '*********',
+        'PORT': '5432',
     }
 }
 
