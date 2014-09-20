@@ -20,58 +20,5 @@
     </div>    
 </header>
 
-
-
-<section class="blog-posts" id="blog-posts">
-    <div class="container">
-        <h3 class="section-title gray works">Last Blog Posts</h3>
-    <div class="column">
-
-        {% for blog_post in blog_posts%}
-       <a href="{% url 'blog' blog_post.id %}"><h5 class="section-title gray works">{{blog_post.title}} {{blog_post.date}}</h5></a>
-       {% endfor %}
-    </div>
-
-
-</div>
-</section>
-
-
-
-<section class="about-me" id="about-me">
-    <div class="container">
-
-        <div class="content">
-        <h3 class="section-title white">Who am I?</h3>
-
-        <p>Hi! I'am Armağan. I keen on creating as well as developing software backend systems particularly web-based systems, which includes system / database administration. Also, I enjoy making web site design with front end development.</p>
-        <br><br>
-
-        <p>For more information about me, you can <a href="#footer-menu" class="follow">follow</a> the white rabbit.</p>
-
-</div>
-        <div class="photo">
-
-        <img src="{{ STATIC_URL }}img/arm.png" alt="profil">
-        </div> 
-        
-</section>
-
-<section class="contact" id="contact">
-   <div class="container">
-        <h3 class="section-title white">Get in Touch!</h3>
-        <form method="post" action="{% url 'home' %}">{% csrf_token %}
-        
-            <div class="form-element">
-            <li>{{ form.name }}</li>
-            <li>{{ form.email }}</li>
-            <li class="content">{{ form.content }}</li>
-            <button class="start-button">Yup!</button>
-            </div>
-        
-        </form>
-   </div> 
-</section>
-
 {% endblock %}
 

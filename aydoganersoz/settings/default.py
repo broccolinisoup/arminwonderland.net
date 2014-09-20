@@ -40,18 +40,22 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'broccolinisoup',
         # The rest is not used with sqlite3:
-        'USER': '******',
-        'PASSWORD': '********',
-        'HOST': '*********',
-        'PORT': '5432',
+        #'USER': '******',
+        #'PASSWORD': '********',
+        #'HOST': '*********',
+        #'PORT': '5432',
     }
 }
+
+
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

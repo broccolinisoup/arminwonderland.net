@@ -11,21 +11,44 @@ class HomeView(TemplateView):
 	template_name = 'home.html'
 
 	def get(self, request, *args, **kwargs):
-
-		blog_posts = BlogPost.objects.all()
-		form = ContactForm()
-		context = {
-			'blog_posts': blog_posts,
-			'form': form,
-		}
+		context = {}
 		return self.render_to_response(context,)
 
-	def post(self, request, *args, **kwargs):
-		#import pdb; pdb.set_trace();
+class BlogPostView(TemplateView):
+	template_name = 'blog_post.html'
 
+	def get(self, request, *args, **kwargs):
+
+
+		blog_posts = BlogPost.objects.all()
+
+		context = {
+			'blog_posts': blog_posts,
+		}
+
+		return self.render_to_response(context)
+
+class AboutMeView(TemplateView):
+	template_name = 'aboutme.html'
+
+	def get(self, request, *args, **kwargs):
+
+		context = {}
+		return self.render_to_response(context)
+
+
+class ContactView(TemplateView):
+	template_name = 'contact.html'
+
+	def get(self, request, *args, **kwargs):
+		form = ContactForm()
+		context = {'form': form,}
+		return self.render_to_response(context)
+
+	def post(self, request, *args, **kwargs):
 		form = ContactForm(request.POST)
-		success = False;
-		
+		success = False
+
 		if form.is_valid():
 			obj = form.save(commit=False)
 			obj.date =datetime.now()
@@ -39,18 +62,3 @@ class HomeView(TemplateView):
 		return self.render_to_response(context)
 
 
-
-class BlogView(TemplateView):
-	template_name = 'blog_detail.html'
-
-	def get(self, request, *args, **kwargs):
-
-		id=self.kwargs['id']
-
-		blog_post = BlogPost.objects.get(id=id)
-
-		context = {
-			'blog_post': blog_post,
-		}
-
-		return self.render_to_response(context)

@@ -1,30 +1,28 @@
-{% extends "base.html" %}
+{% extends "base_arm.html" %}
 
-{% block title %}Welcome to my sample application{% endblock %}
+{% block title %}<title>Broccolinisoup is here | Home </title>{% endblock %}
 
 {% block container %}
-    <!-- Main hero unit for a primary marketing message or call to action -->
-    
-    Creating as well as developing software backend systems particularly web-based systems, which includes system / database administration and software development that have challenging problems to be solved are my personal interests in my profession.
 
-About My Objectives;
 
-•   Influenced by C/C++ programming language family.
+<section class="about-me" id="about-me">
+    <div class="container">
 
-•   User++ level on Linux MacOSX and Windows platforms for development purposes.
+        <div class="content">
+        <h3 class="section-title white">Who am I?</h3>
 
-•   A quick learner of different languages / platforms / database systems and upcoming technologies on open source based and Microsoft platforms including C/C++, C#, Python and PHP. 
+        <p>Hi! I'am Armağan. I keen on creating as well as developing software backend systems particularly web-based systems, which includes system / database administration. Also, I enjoy making web site design with front end development.</p>
+        <br><br>
 
-•   Believing in the development life cycle and prototyping model production with Agile / Scrum working methodologies.
+        <p>For more information about me, you can <a href="#footer-menu" class="follow">follow</a> the white rabbit.</p>
 
-•   Object oriented approach.
+</div>
+        <div class="photo">
 
-•   Upgrader.
+        <img src="{{ STATIC_URL }}img/arm.png" alt="profil">
+        </div> 
+        
+</section>
 
-    <!-- Example row of columns -->
-    <div class="row">
-    
-    </div>
-
-    <hr>
 {% endblock %}
+

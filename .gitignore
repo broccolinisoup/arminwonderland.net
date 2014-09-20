@@ -9,3 +9,6 @@ local.py
 
 #migrations
 migrations/
+
+#db
+broccolinisoup

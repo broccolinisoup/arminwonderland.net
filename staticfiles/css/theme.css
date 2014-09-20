@@ -102,13 +102,13 @@ padding-top: 2px;
 	background-color: #FAEBD7;
 	
 	width: 100%;
-	height: 400px;
+	height: 605px;
 }
 
 .about-me {
 	background-color: #FF9D9D;
 	width: 100%;
-	height: 340px;
+	height: 605px;
 }
 
 .section-title {
@@ -218,7 +218,7 @@ padding-top: 2px;
 
 .contact {
 	background-color: #FFF4F4;
-	height: 500px;
+	height: 605px;
 
 }
 
@@ -264,11 +264,11 @@ padding-top: 2px;
 
 footer {
 	background-color: #191e22;
-	height: 170px;
+	height: 130px;
 }
 
 .footer-menu {
-	padding-top: 15px;
+	padding-top: 10px;
 }
 
 .footer-menu li {
@@ -303,7 +303,7 @@ footer {
 
 .small-footer {
 	color: #fff;
-	font-size: 13px;
+	font-size: 12px;
 	margin-left: 350px;
 	margin-bottom: 
 }
