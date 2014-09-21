@@ -161,7 +161,6 @@ CORE_APPS = (
 
 EXTERNAL_APPS = (
     'django_extensions',
-    'south',
     'tinymce',
 )
 
