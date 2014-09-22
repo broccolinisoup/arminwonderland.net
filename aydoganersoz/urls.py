@@ -10,9 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 	# Examples:
 	url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^blogpost/$', BlogPostView.as_view(), name='blogpost'),
-    url(r'^aboutme/$', AboutMeView.as_view(), name='aboutme'),
-    url(r'^contact/$', ContactView.as_view(), name='contact'),
+
 	#url(r'^blog/(?P<id>\d+)/$', BlogView.as_view(), name='blog'),
 
 	

@@ -31,15 +31,90 @@
         </div>-->
         <ul class="menu">
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'blogpost' %}">Tech Blog</a></li>
-            <li><a href="{% url 'aboutme' %}">About Me</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="#blog-posts-2">Tech Blog</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
 
         </ul>
     </div>
 </nav>
 
-{% block container %} {% endblock %}
+
+
+<header>
+    <div class="white-banner">
+    {% if success %}<h1>Hey! Thank you!</h1>
+    <p class="banner-parag"> I got your message.<br>
+     I will return you as soon as possible. Bye!
+        </p>
+    {% else %}<h1>Hello! I'm Armağan.</h1>
+        <p class="banner-parag"> I try to specialise in web developing.<br>
+        Let this website helps you find some technical writings or information about me.
+        </p>
+        <a type = 'button'  class="start-button" href="#">Let's Start!</a>{% endif %}
+
+    </div>
+</header>
+
+
+<section class="blog-posts" id="blog-posts">
+    <div class="container">
+        <h1>"Do Something today that your future self will thank you for..."</h1>
+    </div>
+</section>
+
+<section class="blog-posts blog-posts-2" id="blog-posts-2">
+    <div class="container">
+        <h3 class="section-title gray works">Last Blog Posts</h3>
+    <div class="column">
+
+        {% for blog_post in blog_posts%}
+       <a href="#"><h5 class="section-title gray works">{{blog_post.title}} {{blog_post.date}}</h5></a>
+       {% endfor %}
+    </div>
+
+
+</div>
+</section>
+
+
+
+<section class="about-me" id="about-me">
+    <div class="container">
+
+        <div class="content">
+        <h3 class="section-title white">Who am I?</h3>
+
+        <p>Hi! I'am Armağan. I keen on creating as well as developing software backend systems particularly web-based systems, which includes system / database administration. Also, I enjoy making web site design with front end development.</p>
+        <br><br>
+
+        <p>For more information about me, you can <a href="#footer-menu" class="follow">follow</a> the white rabbit.</p>
+
+</div>
+        <div class="photo">
+
+        <img src="{{ STATIC_URL }}img/arm.png" alt="profil">
+        </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+   <div class="container">
+        <h3 class="section-title white">Get in Touch!</h3>
+        <form method="post" action="{% url 'home' %}">{% csrf_token %}
+
+            <div class="form-element">
+            <li>{{ form.name }}</li>
+            <li>{{ form.email }}</li>
+            <li class="content">{{ form.content }}</li>
+            <button class="start-button">Yup!</button>
+            </div>
+
+        </form>
+   </div>
+</section>
+
 
 <footer>
    <div class="container">
