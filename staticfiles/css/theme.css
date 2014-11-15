@@ -67,13 +67,18 @@ header {
 
 .blog-posts h1 {
     text-align: center;
-    /* padding: 30px; */
-    padding-top: 220px;
-    font-weight: bold;
-    font-size: 40px;
-    color: black;
-    position: fixed;
-    width:500px;
+/* padding: 30px; */
+padding-top: 65px;
+font-weight: bold;
+font-size: 35px;
+color: black;
+z-index: 1;
+
+
+}
+
+.blog-post img {
+    z-index:1;
 
 }
 
@@ -111,23 +116,39 @@ padding-top: 2px;
 }
 
 .blog-posts {
-	background-image: url('../img/techblog.jpg');
+	background-image: url('../img/basla.jpg');
     height: 800px;
     background-position: center center;
     background-size: cover;
     width: 100%;
-    opacity: 0.5;
+
+
 }
 
-.blog-posts-2 {
-    opacity: 1.0;
-    -webkit-filter: sepia(100%);
+.blog {
+    background-image: url('../img/blog-post.jpg');
+    opacity: 0.7;
+    height: 800px;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+
 }
 
 .about-me {
-	background-color: #FF9D9D;
+background: url('../img/techblog.jpg') no-repeat center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	width: 100%;
-	height: 605px;
+	height: 600px;
+	opacity: 0.7;
+}
+
+.about-me .content {
+    padding-top: 140px;
 }
 
 .section-title {
@@ -172,7 +193,7 @@ padding-top: 2px;
 	float: right;
 	width: 50%;
 	height: 40px;
-	padding: 60px 0 0 30px;
+	padding: 160px 0 0 30px;
 	transform: scale(0.5);
 	-webkit-transform:scale(0.5);
 	-moz-transform:transform:scale(0.5);
@@ -325,4 +346,17 @@ footer {
 	font-size: 12px;
 	margin-left: 350px;
 	margin-bottom: 
+}
+
+.arrow {
+    margin-left: 500px;
+    margin-top: 380px;
+}
+
+.circle {
+   width: 1000px;
+height: 150px;
+background: white;
+margin-top: 150px;
+opacity: 0.7;
 }

@@ -59,21 +59,22 @@
 
 <section class="blog-posts" id="blog-posts">
     <div class="container">
-        <h1>"Do Something today that your future self will thank you for..."</h1>
+        <div class="circle"> <h1>"Do Something today that your future self will thank you for..."</h1></div>
+
+        <!-- <div class="arrow">
+        <img width="60" height="60" src="{{ STATIC_URL }}img/downarrow.png"></div>-->
     </div>
 </section>
 
-<section class="blog-posts blog-posts-2" id="blog-posts-2">
+<section class="blog" id="blog-posts-2">
     <div class="container">
-        <h3 class="section-title gray works">Last Blog Posts</h3>
+        <h3 class="section-title gray">Last Blog Posts</h3>
     <div class="column">
 
         {% for blog_post in blog_posts%}
-       <a href="#"><h5 class="section-title gray works">{{blog_post.title}} {{blog_post.date}}</h5></a>
+       <a href="#"><h5 class="section-title">{{blog_post.title}} {{blog_post.date}}</h5></a>
        {% endfor %}
     </div>
-
-
 </div>
 </section>
 
