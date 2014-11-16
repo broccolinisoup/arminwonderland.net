@@ -22,5 +22,5 @@ try:
     # can override those settings it sees fit.
     from local import * 
 except ImportError:
-	from aydoganersoz.settings.default import *
+	from arminwonderland.settings.default import *
     #from default import *

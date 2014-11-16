@@ -1,5 +1,5 @@
 from django.contrib import admin
-from aydoganersoz.home.models import BlogPost, Contacts
+from arminwonderland.home.models import BlogPost, Contacts
 class BlogPostAdmin(admin.ModelAdmin):
     pass
 

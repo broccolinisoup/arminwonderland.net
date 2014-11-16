@@ -66,7 +66,7 @@ if DEBUG:
     DEBUG_TOOLBAR_CONFIG = {
         'INTERCEPT_REDIRECTS': False,
         # 'SHOW_TOOLBAR_CALLBACK': custom_show_toolbar_function,
-        'EXTRA_SIGNALS': ['aydoganersoz.signals.MySignal'],
+        'EXTRA_SIGNALS': ['arminwonderland.signals.MySignal'],
         'HIDE_DJANGO_SQL': False,
         'TAG': 'div',
     }
