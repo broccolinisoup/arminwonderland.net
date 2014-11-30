@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="tr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Self micro-blog">
+    <meta name="author" content="Armağan Ersöz">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="broccolinisoup,python,scala,programming">
+
+    {% block title %}{% endblock %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/theme.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/scripts.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <!--<div class="logo">
+            <img style="background-color:#293137" src="assets/images/logo.png" alt="logo">
+        </div>-->
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="#blog-posts-2">Tech Blog</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<header>
+    <div class="white-banner">
+    {% if success %}<h1>Hey! Thank you!</h1>
+    <p class="banner-parag"> I got your message.<br>
+     I will return you as soon as possible. Bye!
+        </p>
+    {% else %}<h1>Hello! I'm Armağan.</h1>
+        <p class="banner-parag"> I try to specialise in web developing.<br>
+        Let this website helps you find some technical writings or information about me.
+        </p>
+        <a type = 'button'  class="start-button" href="#">Let's Start!</a>{% endif %}
+
+    </div>
+</header>
+
+
+<section class="blog-posts" id="blog-posts">
+    <div class="container">
+        <div class="circle"> <h1>"Do Something today that your future self will thank you for..."</h1></div>
+
+        <!-- <div class="arrow">
+        <img width="60" height="60" src="{{ STATIC_URL }}img/downarrow.png"></div>-->
+    </div>
+</section>
+
+<section class="blog" id="blog-posts-2">
+    <div class="container">
+        <h3 class="section-title gray">Last Blog Posts</h3>
+    <div class="column">
+
+        {% for blog_post in blog_posts%}
+       <a href="#"><h5 class="section-title">{{blog_post.title}} {{blog_post.date}}</h5></a>
+       {% endfor %}
+    </div>
+</div>
+</section>
+
+
+
+<section class="about-me" id="about-me">
+    <div class="container">
+
+        <div class="content">
+        <h3 class="section-title white">Who am I?</h3>
+
+        <p>Hi! I'am Armağan. I keen on creating as well as developing software backend systems particularly web-based systems, which includes system / database administration. Also, I enjoy making web site design with front end development.</p>
+        <br><br>
+
+        <p>For more information about me, you can <a href="#footer-menu" class="follow">follow</a> the white rabbit.</p>
+
+</div>
+        <div class="photo">
+
+        <img src="{{ STATIC_URL }}img/arm.png" alt="profil">
+        </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+   <div class="container">
+        <h3 class="section-title white">Get in Touch!</h3>
+        <form method="post" action="{% url 'home' %}">{% csrf_token %}
+
+            <div class="form-element">
+            <li>{{ form.name }}</li>
+            <li>{{ form.email }}</li>
+            <li class="content">{{ form.content }}</li>
+            <button class="start-button">Yup!</button>
+            </div>
+
+        </form>
+   </div>
+</section>
+
+
+<footer>
+   <div class="container">
+         <ul class="footer-menu" id="footer-menu">
+                <li><a href="https://twitter.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/twitter.png" alt="profil"></a></li>
+                <li><a href="https://www.facebook.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/facebook.png" alt="profil"></a></li>
+                <li><a href="http://www.linkedin.com/profile/view?id=175690905&trk=nav_responsive_tab_profile" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/linkedin.png" alt="profil"></a></li>
+                <li><a href="https://github.com/broccolinisoup" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/github.png" alt="profil"></a></li>
+                <li><a href="http://www.kadinyazilimci.com/author/broccolinisoup/" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/kadinyazilimci.png" alt="profil"></a></li>
+                <li><a href="http://www.kadinyazilimci.com/author/broccolinisoup/" class="label label-info" data-show-count="false" data-lang="en"><img src="{{ STATIC_URL }}img/Slideshare.png" alt="profil"></a></li>
+            </ul>
+
+            <h2 class="small-footer">All content on this site is copyright © 2014 Armağan Ersöz</h2>
+   </div> 
+</footer> 
+</body>
+</html>
