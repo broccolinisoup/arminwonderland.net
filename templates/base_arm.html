@@ -9,9 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>Broccolinisoup Web Page</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="shortcut icon" href="http://www.clker.com/cliparts/X/Y/w/B/B/H/dark-broccoli-hi.png">
     <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
@@ -81,7 +82,7 @@
 
 
                         <hr class="star-light">
-                        <span class="skills">Web Developer</span>
+                        <span class="skills">Web Developing</span>
 
 
                     </div>
@@ -90,78 +91,28 @@
         </div>
     </header>
 
-
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Technical Writings</h2>
                     <hr class="star-primary">
                 </div>
             </div>
+            {% for blog_post in blog_posts%}
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-12 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ STATIC_URL }}img/portfolio/cabin.png" class="img-responsive" alt="">
+
+                            <h5>{{blog_post.title}} </h5>
+                        <h5>Published at {{blog_post.date}}</h5>
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ STATIC_URL }}img/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ STATIC_URL }}img/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ STATIC_URL }}img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ STATIC_URL }}img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ STATIC_URL }}img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
-                </div>
+
+
             </div>
+             {% endfor %}
         </div>
     </section>
 
@@ -194,7 +145,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
+                    <h2>Get in Touch!</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -214,6 +165,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
+
                                 <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
 
                                 <p class="help-block text-danger"></p>
