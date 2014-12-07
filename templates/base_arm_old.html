@@ -69,11 +69,11 @@
 <section class="blog" id="blog-posts-2">
     <div class="container">
         <h3 class="section-title gray">Last Blog Posts</h3>
-    <div class="column">
+    <div class="column">{% endfor %}
 
         {% for blog_post in blog_posts%}
        <a href="#"><h5 class="section-title">{{blog_post.title}} {{blog_post.date}}</h5></a>
-       {% endfor %}
+
     </div>
 </div>
 </section>
