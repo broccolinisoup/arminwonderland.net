@@ -20,6 +20,11 @@ class HomeView(TemplateView):
 		success = False
 
 		if form.is_valid():
+
+
+			name = form.cleaned_data['name']
+			email = form.cleaned_data['email']
+			content = form.cleaned_data['content']
 			obj = form.save(commit=False)
 			obj.date =datetime.now()
 			obj.save()
