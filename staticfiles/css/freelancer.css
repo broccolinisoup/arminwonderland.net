@@ -81,8 +81,8 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
-    background-image: url('../img/techblog.jpg');
+    color: #CA5C5C;
+    background-image: url('../img/alice2.png');
 }
 
 header .container {
@@ -98,7 +98,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: cursive;
     font-size: 2em;
     font-weight: 700;
 }
