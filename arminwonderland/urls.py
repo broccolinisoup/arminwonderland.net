@@ -11,7 +11,7 @@ urlpatterns = patterns('',
 	# Examples:
 	url(r'^$', HomeView.as_view(), name='home'),
 
-	#url(r'^blog/(?P<id>\d+)/$', BlogView.as_view(), name='blog'),
+	url(r'^blog/(?P<id>\d+)/$', BlogView.as_view(), name='blog'),
 
 	
 	(r'^tinymce/', include('tinymce.urls')),

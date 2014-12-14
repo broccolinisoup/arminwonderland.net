@@ -20,8 +20,6 @@ class HomeView(TemplateView):
 		success = False
 
 		if form.is_valid():
-
-
 			name = form.cleaned_data['name']
 			email = form.cleaned_data['email']
 			content = form.cleaned_data['content']
@@ -36,4 +34,12 @@ class HomeView(TemplateView):
 		}
 		return self.render_to_response(context)
 
+class BlogView(TemplateView):
+	template_name = 'technical_writings_detail.html'
 
+	def get(self, request, *args, **kwargs):
+		id = self.kwargs['id']
+		blog_post = BlogPost.objects.get(id=id)
+
+		context = {'blog_post':blog_post }
+		return self.render_to_response(context,)

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Broccolinisoup is here | Home </title>{% endblock %}
+
+{% block container %}
+
+
+<header>
+    <div class="white-banner">
+    {% if success %}<h1>Hey! Thank you!</h1>
+    <p class="banner-parag"> I got your message.<br>
+     I will return you as soon as possible. Bye!   
+        </p>
+    {% else %}<h1>Hello! I'm Armağan.</h1>
+        <p class="banner-parag"> I try to specialise in web developing.<br>
+        Let this website helps you find some technical writings or information about me.
+        </p>
+        <a type = 'button'  class="start-button" href="#">Let's Start!</a>{% endif %}
+
+    </div>    
+</header>
+
+{% endblock %}
+
