@@ -17,7 +17,9 @@ class HomeView(TemplateView):
 		return self.render_to_response(context,)
 	def post(self, request, *args, **kwargs):
 		form = ContactForm(request.POST)
-		success = False
+		success=False
+		blog_posts=[]
+
 
 		if form.is_valid():
 			name = form.cleaned_data['name']
@@ -27,9 +29,13 @@ class HomeView(TemplateView):
 			obj.date =datetime.now()
 			obj.save()
 			success = True
+			form = ContactForm()
+			blog_posts = BlogPost.objects.order_by('date')
+
 		context = {
 			'form' : form,
 			'success':success,
+			'blog_posts':blog_posts,
 
 		}
 		return self.render_to_response(context)

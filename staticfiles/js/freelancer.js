@@ -35,3 +35,20 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$(document).ready(function() {
+ $(".btn-group-xs").on("click", function() {
+
+     $(".white-banner").slideToggle("slow");
+
+
+ });});
+
+$(document).ready(function() {
+ $(".btn-mini").on("click", function() {
+
+     $(".white-banner").slideToggle("slow");
+     $("header").slideToggle("slow");
+
+
+ });});

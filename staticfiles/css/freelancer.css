@@ -459,3 +459,28 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+.white-banner {
+	width: 700px;
+height: 250px;
+background-color: #ffffff;
+margin: auto;
+margin-top: -110px;
+opacity: 0.6;
+padding-top: 35px;
+}
+
+.white-banner h1 {
+	text-align: center;
+	padding-bottom: 10px;
+    color: #000000;
+
+}
+.white-banner p {
+    color: #000000;
+}
+
+.start-button {
+
+    color: #0085a1;
+}
