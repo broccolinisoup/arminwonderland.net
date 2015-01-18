@@ -2,31 +2,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!--<img class="img-responsive" src="{{ STATIC_URL }}img/profile.png" alt="">-->
-                    <div class="white-banner">
-    {% if success %}<h1>Hey! Thank you!</h1>
-    <p class="banner-parag"> I got your message.<br>
-     I will return you as soon as possible. Bye!
-        </p>
-                        <a type = 'button'  class="btn btn-success btn-group-xs" href="#">Oukay.</a>
-    {% else %}<h1>Hello! I'm Armağan.</h1>
-        <p class="banner-parag"> I try to specialise in web developing.<br>
-        Let this website helps you find some technical writings or information about me.
-        </p>
-        <a type = 'button'  class="btn btn-success btn-mini" href="#">Let's Start!</a>{% endif %}
+                    <img class="img-responsive"  src="{{ STATIC_URL }}img/geekgirl.png" alt="">
 
-    </div>
-
-
-
-
+                {% if success %}
+                <div class="white-banner">
+                    <h1>Hey! Thank you!</h1>
+                    <p class="banner-parag"> I got your message.<br>I will return you as soon as possible. Bye!</p>
+                    <a type = 'button'  class="btn btn-success btn-group-xs" href="#">Oukay.</a>
+                </div>
+                {% else %}
+                <div class="intro-text">
+                        <span class="name">Welcome to Wonderland</span>
                         <hr class="star-light">
-
-
-
-
+                        <span class="skills">Web Developer</span>
+                </div>
+                {% endif %}
 
                 </div>
             </div>
         </div>
     </header>
+

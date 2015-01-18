@@ -82,7 +82,8 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: wheat;
-    background-image: url('../img/blog-post.jpg');
+    background-color: indianred;
+
 
 }
 
@@ -182,8 +183,8 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
-    background-color:rgba(188, 24, 74, 0.47);
+background: #18bc9c;
+background-color:rgba(188, 24, 74, 0.47);
 }
 
 .quatation {
@@ -208,6 +209,12 @@ opacity: 0.7;
     section.first {
         padding-top: 75px;
     }
+}
+section.portfolio {
+    color: #fff;
+
+
+background-image: url('../img/hotair.jpg');
 }
 
 #portfolio .portfolio-item {
@@ -259,6 +266,7 @@ opacity: 0.7;
 
 #portfolio * {
     z-index: 2;
+
 }
 
 @media(min-width:767px) {

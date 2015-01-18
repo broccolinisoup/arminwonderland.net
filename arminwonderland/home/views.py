@@ -18,7 +18,7 @@ class HomeView(TemplateView):
 	def post(self, request, *args, **kwargs):
 		form = ContactForm(request.POST)
 		success=False
-		blog_posts=[]
+		blog_posts = BlogPost.objects.order_by('date')
 
 
 		if form.is_valid():
@@ -30,7 +30,7 @@ class HomeView(TemplateView):
 			obj.save()
 			success = True
 			form = ContactForm()
-			blog_posts = BlogPost.objects.order_by('date')
+
 
 		context = {
 			'form' : form,
