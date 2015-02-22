@@ -12,13 +12,13 @@ class HomeView(TemplateView):
 
 	def get(self, request, *args, **kwargs):
 		form = ContactForm()
-		blog_posts = BlogPost.objects.order_by('date')
+		blog_posts = BlogPost.objects.order_by('-date')
 		context = {'form':form,'blog_posts': blog_posts}
 		return self.render_to_response(context,)
 	def post(self, request, *args, **kwargs):
 		form = ContactForm(request.POST)
 		success=False
-		blog_posts = BlogPost.objects.order_by('date')
+		blog_posts = BlogPost.objects.order_by('-date')
 
 
 		if form.is_valid():
