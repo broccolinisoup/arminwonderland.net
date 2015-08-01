@@ -14,3 +14,4 @@ migrations/
 broccolinisoup
 
 .DS_Store
+arminwonderland/settings/default.py
