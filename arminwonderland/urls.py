@@ -8,24 +8,28 @@ from arminwonderland.home.views import *
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	# Examples:
-	url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^about/$', AboutView.as_view(), name='about'),
+    # Examples:
+    url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^about/$', AboutView.as_view,name='about'),
     url(r'^contact/$', ContactView.as_view(), name='contact'),
+    url(r'^stream/$', TweeterView.as_view(), name='stream'),
 
 
-	url(r'^blog/(?P<id>\d+)/$', BlogView.as_view(), name='blog'),
 
-	
-	(r'^tinymce/', include('tinymce.urls')),
-	# static
-	url(r'^%s(?P<path>.*)$' % settings.STATIC_URL.lstrip('/'), serve,
-		{'show_indexes': True, 'insecure': False}),
-	# Uncomment the admin/doc line below to enable admin documentation:
-	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-	# Uncomment the next line to enable the admin:
-	url(r'^admin/', include(admin.site.urls)),
+    url(r'^blog/(?P<pk>\d+)/$', BlogView.as_view(), name='blog'),
 
-	#TO DO: Admin tools'u ayaga kaldir.
-	#url(r'^admin_tools/', include('admin_tools.urls')),
+    #CKEditor
+    (r'^ckeditor/', include('ckeditor.urls')),
+
+    (r'^tinymce/', include('tinymce.urls')),
+    # static
+    url(r'^%s(?P<path>.*)$' % settings.STATIC_URL.lstrip('/'), serve,
+        {'show_indexes': True, 'insecure': False}),
+    # Uncomment the admin/doc line below to enable admin documentation:
+    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    # Uncomment the next line to enable the admin:
+    url(r'^admin/', include(admin.site.urls)),
+
+    #TO DO: Admin tools'u ayaga kaldir.
+    #url(r'^admin_tools/', include('admin_tools.urls')),
 )

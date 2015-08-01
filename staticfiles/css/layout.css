@@ -32,7 +32,7 @@
         padding: 0;
     }
     .nav {
-        width: 100%;
+        width: 19%;
         height: 80px;
     }
     .container {
@@ -60,4 +60,19 @@
         padding-top: 50px;
         float: left;
         width: 50%;
+    }
+    .twitterIframe {
+
+        background-color: #3BAAE1;
+    }
+
+    .post-header {
+        font-size: 35px;
+        font-family: Raleway, sans-serif;
+    }
+
+    .post-detail {
+        font-size:18px;
+
+
     }

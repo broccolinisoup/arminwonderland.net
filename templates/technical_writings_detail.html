@@ -15,9 +15,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading" style="color:white">
-                        <h1 >{{blog_post.title}}</h1>
+                        <h1 >{{object.title}}</h1>
                         <h2 class="subheading"></h2>
-                        <span class="meta" style="color:white">Posted by me on {{blog_post.date}}</span>
+                        <span class="meta" style="color:white">Posted by me on {{object.date}}</span>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>{{blog_post.context| safe}}</p>
+                    <p>{{object.context| safe}}</p>
 
                 </div>
             </div>

@@ -1,7 +1,7 @@
 from django import forms
-from django.forms import ModelForm
+from django.core.urlresolvers import reverse
 from arminwonderland.home.models import Contacts
-from django.forms.extras import widgets
+
 
 class DifferentlySizedTextarea(forms.Textarea):
   def __init__(self, *args, **kwargs):
@@ -18,6 +18,8 @@ class ContactForm(forms.ModelForm):
     email= forms.EmailField(label='Email Address', required=True, error_messages={'required': 'Please enter your email address'}, max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Email Address', 'id':'email'}))
     content= forms.CharField(label='Message', required=True,error_messages={'required': 'Please enter your message'}, max_length=500, widget=DifferentlySizedTextarea(attrs={'class':'form-control','placeholder':'Message', 'id':'message'}))
 
+    #def get_absolute_url(self):
+     #   return reverse('')
     class Meta:
     	model = Contacts
     	fields = ['name', 'email', 'content']

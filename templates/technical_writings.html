@@ -1,25 +1,26 @@
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% for blog_post in blog_posts%}
-                <div class="post-preview">
-                    <a href="{% url 'blog' blog_post.id %}">
-                        <h2 class="post-title">
-                            {{blog_post.title}}
-                        </h2>
-
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 ">
+            {% for post in writings %}
+                <div class="blog-post-style">
+                    <a href="{% url 'blog' post.id %}">
+                        <p class="post-header">
+                            {{ post.title }}
+                        </p>
                     </a>
-                    <p class="post-meta">Posted by me at {{blog_post.date}}</p>
+                        <p class="post-detail">
+                            {{ post.content |truncatewords:50 | safe }}
+                        </p>
+
                 </div>
-                 {% endfor %}
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-            </div>
+            {% endfor %}
         </div>
+
+
+        <div class="col-lg-6 ">
+        <iframe src="{% url 'stream' %}" width="600" height="400" frameborder="0">
+                    </iframe>
+        </div>
+
     </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{{ STATIC_URL }}css/clean-blog.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<p style="font-family: Raleway, sans-serif; color: #282828; font-size: larger;">Twitter</p>
+
+<div class="container">
+    {% for tweet in object_list %}
+
+        <div class="row">
+            <div class="col-md-3">
+                {% if tweet.retweeted %}
+                    <img src=" {{ tweet.retweeted_status.author.profile_image_url }}"/>
+                {% else %}
+                    <img src=" {{ tweet.author.profile_image_url }}"/>
+                {% endif %}
+            </div>
+            <div class="col-md-3">
+                        <p style=" font-family: Helvetica Neue;"></p>{{ tweet.text }}
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
+</body>
+</html>

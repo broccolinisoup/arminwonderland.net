@@ -1,19 +1,20 @@
 from django.db import models
 from tinymce.models import HTMLField
+from ckeditor.fields import RichTextField
 
-class BlogPost(models.Model):
-	id = models.IntegerField(primary_key=True)
+
+class TechnicalWriting(models.Model):
 	title = models.CharField(max_length=1024, verbose_name = u'Baslik')
-	context = HTMLField()
-	date = models.DateField(verbose_name = u'Yayimlandigi Tarih')
+	content = RichTextField()
+	publish_date = models.DateField(verbose_name = u'Yayimlandigi Tarih')
 
 	def __unicode__(self):
 		return u'%s' % (self.title)
 
 	class Meta:
-		ordering = ["date"]
-		verbose_name = "Blog Postu"
-		verbose_name_plural = "Blog Postlari"
+		ordering = ["publish_date"]
+		verbose_name = u"Teknik Yazi"
+		verbose_name_plural = u"Teknik Yazilar"
 
 
 class Contacts(models.Model):
